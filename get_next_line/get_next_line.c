@@ -37,10 +37,6 @@ int	rest_char(t_list **list)
 	new_node->str_buf = buffer;
 	new_node->next = NULL;
 	dealloc(list, new_node, buffer);
-	// if (new_node->str_buf[0])
-	// 	*list = new_node;
-	// else
-	// 	return (free(new_node), free(buffer), 0);
 	return (0);
 }
 
