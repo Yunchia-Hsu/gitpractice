@@ -84,7 +84,7 @@ long	ft_atol(const char *str)
 	}
 	return (n * sign);
 }
-????????????
+
 void	init_stack_a(t_stack_node **a, char **argv)
 {
 	long	n;
@@ -103,9 +103,8 @@ void	init_stack_a(t_stack_node **a, char **argv)
 		if (check_duplicate(*a, (int) n))
 			free_errors(a);
 		//append(a, (int)n);
-		if (append(a, (int)n) == -1)
+		if (append(a, (int)n) == -1) //if (error_duplicate(*a, (int)n))
 			free_errors(a);
 		i++;
 	}
 }
-????????
