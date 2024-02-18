@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-void	set_cheapest(t_stack_node *stack)
+void	set_cheapest(t_stack_node *stack)//找push cost 裡面最小的值
 {
 	int				i;
 	long			cost_value;
@@ -75,8 +75,9 @@ void	current_index(t_stack_node *stack)
 	}
 }
 
-void	set_target_for_a(t_stack_node *a, t_stack_node *b)
+void	set_target_for_a(t_stack_node *a, t_stack_node *b) //找出比本身小但是是逼裡面最大的值
 {
+	//compare current node and next match node 
 	t_stack_node	*current_b;
 	t_stack_node	*target_node;
 	long			best_match;
