@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-t_stack_node	*find_min(t_stack_node *stack)
+t_stack_node	*find_min(t_stack_node *stack) //check if stack is asceding
 {
 	t_stack_node	*min_node;
 	long			min;
@@ -73,6 +73,7 @@ void	sort_three(t_stack_node **stack)
 	if (*stack == NULL)
 		return ;
 	max_node = find_max(*stack);
+	 //printf("in sort three max_node : %d\n", max_node->value);
 	if (max_node == *stack)
 		ra(stack, false);
 	else if (max_node == (*stack)->next)
