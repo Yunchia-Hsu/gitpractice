@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-void	set_target_for_b(t_stack_node *a, t_stack_node *b)
+void	set_target_for_b(t_stack_node *a, t_stack_node *b)//找出比本身big但是是逼裡面最small的值
 {
 	t_stack_node	*current_a;
 	t_stack_node	*target;
