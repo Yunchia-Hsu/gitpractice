@@ -30,13 +30,13 @@ int	count_numbers(const char *s, char c)
 	return (count_string);
 }
 
-void	min_on_top(t_stack_node **a)
+void	min_on_top(t_stack_node **a)  //Define a function that moves the smallest number to the top
 {
 	if (*a == NULL)
 		return ;
-	while ((*a)->value != find_min(*a)->value)
+	while ((*a)->value != find_min(*a)->value)//As long as the smallest number is not at the top
 	{
-		if (find_min(*a)->above_median)
+		if (find_min(*a)->above_median)//Rotate or reverse rotate according to the position of the node on the median
 			ra(a, false);
 		else
 			rra(a, false);
