@@ -21,7 +21,7 @@ void	free_stack(t_stack_node **stack)
 	while (*stack)
 	{
 		tmp = (*stack)->next;
-		(*stack)->value = 0;
+		(*stack)->value = 0; //not necessary it's for memory leak check
 		free(*stack);
 		*stack = tmp;
 	}
@@ -37,10 +37,13 @@ void	free_errors(t_stack_node **stack)
 
 int	error_syntax(char *str)
 {
+	//看第一個是不是符號或是數字
 	if (!(*str == '-' || *str == '+' || (*str >= '0' && *str <= '9')))
 		return (1);
+	//第一個是符號但第二個不是數字
 	if ((*str == '-' || *str == '+' ) && !(str[1] >= '0' && str[1] <= '9'))
 		return (1);
+	//符合第一第二 差之後的事不是數字
 	while (*++str)
 	{
 		if (!(*str >= '0' && *str <= '9'))
