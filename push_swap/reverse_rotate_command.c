@@ -51,7 +51,7 @@ void	rrr(t_stack_node **a, t_stack_node **b, bool checker)
 }
 
 void	rev_rotate_both(t_stack_node **a, t_stack_node **b,
-		t_stack_node *cheapest_node)
+		t_stack_node *cheapest_node) //Define a function that rotates both the bottom `a` and `b` nodes to the top of their stacks, if it's the cheapest move
 {
 	while (*b != cheapest_node->target && *a != cheapest_node)
 		rrr(a, b, false);
