@@ -34,7 +34,7 @@ void	prep_for_push(t_stack_node **stack,
 	}
 }
 
-t_stack_node	*get_cheapest(t_stack_node *stack)
+t_stack_node	*get_cheapest(t_stack_node *stack) //Define a function that searches for the cheapest node, that is set by bool
 {
 	if (!stack)
 		return (NULL);
@@ -53,7 +53,7 @@ static void	move_b_to_a(t_stack_node **a, t_stack_node **b)
 	pa(a, b, false);
 }
 
-static void	move_a_to_b(t_stack_node **a, t_stack_node **b)
+static void	move_a_to_b(t_stack_node **a, t_stack_node **b) //決定要如何移動node a & target node
 {
 	t_stack_node	*cheapest_n;
 
