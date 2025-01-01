@@ -2,7 +2,7 @@
 libft is the first project at Hive Helsinki. It'a library include reimplementation of certain C standard library function.
 It has grown over time with the addition of more practical functions (like ft_printf , get_next_line).
 
-# printf
+# Printf
 The project is to recreate the function "printf" in C library.
 
 Implemented conversions:
@@ -15,5 +15,5 @@ Implemented conversions:
 %X - hexadecimal (uppercase)
 %% - percent sign
 
-# get_next_line
+# Get_next_line
 A function that returns the next line up to newline read from a file descriptor.
